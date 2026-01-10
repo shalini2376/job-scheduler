@@ -1,11 +1,11 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-import dotenv from "dotenv";
-dotenv.config();
+const dotenv = require("dotenv");
 const express = require("express")
 const cors = require('cors')
 
 const jobRoutes = require('./routes/jobs.routes');
 
+dotenv.config();
 const app = express();
 
 app.use(cors());
