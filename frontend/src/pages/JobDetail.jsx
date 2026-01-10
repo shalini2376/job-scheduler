@@ -14,7 +14,7 @@ function JobDetail() {
 
   return (
     <div>
-      <h2>Job Detail</h2>
+      <h2 className="text-2xl font-semibold text-center">Job Detail</h2>
 
       <p><strong>ID:</strong> {job.id}</p>
       <p><strong>Task Name:</strong> {job.taskName}</p>

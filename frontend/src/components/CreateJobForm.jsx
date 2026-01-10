@@ -82,7 +82,7 @@ function CreateJobForm({onJobCreated}){
                         placeholder='{"email": "test@gmail.com"}'
                     />
                 </div>
-                <button type="submit" disabled={loading}>
+                <button type="submit" disabled={loading} className="bg-green-600 text-white px-3 py-1 rounded">
                     {loading ? 'Creating...' : 'Create Job'}
                 </button>
             </form>
