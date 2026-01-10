@@ -22,7 +22,7 @@ The project focuses on backend logic, API design, and state handling, with a cle
 
 ### Frontend
 - Platform: Netlify
-- URL: https://https://jobscheduler26.netlify.app
+- URL: https://jobscheduler26.netlify.app
 
 ### Notes
 - Environment variables are used for configuration.
