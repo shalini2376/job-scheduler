@@ -14,6 +14,20 @@ A full-stack Job Scheduler & Automation System built using Node.js, Express, SQL
 
 The project focuses on backend logic, API design, and state handling, with a clean and functional frontend built using React and Tailwind CSS.
 
+## 🌐 Live Deployment
+
+### Backend
+- Platform: Render
+- Base URL: https://job-scheduler-en2d.onrender.com
+
+### Frontend
+- Platform: Netlify
+- URL: https://https://jobscheduler26.netlify.app
+
+### Notes
+- Environment variables are used for configuration.
+- SQLite is used for persistence; data may reset on redeploy in free hosting.
+
 ### 🛠 Tech Stack
 
 ## Backend
