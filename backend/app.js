@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// test route
+app.get("/", (req, res) => {
+  res.send("Job Scheduler API is running 🚀");
+});
+
 app.use('/jobs', jobRoutes);
 
 const PORT = process.env.PORT || 5000;
