@@ -23,7 +23,7 @@ function App() {
     loadJobs();
   }, [statusFilter, priorityFilter]);
 
-  console.log(import.meta.env.VITE_API_BASE_URL);
+  // console.log(import.meta.env.VITE_API_BASE_URL);
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">

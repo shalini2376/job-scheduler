@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import  {useNavigate } from 'react-router-dom';
 import { runJob } from '../services/jobApi';
 
 function JobsTable({jobs, onJobUpdated }){
+    const navigate = useNavigate();
+
     if (!jobs.length){
         return <p>No jobs found.</p>
     }
@@ -31,9 +33,11 @@ function JobsTable({jobs, onJobUpdated }){
                 </thead>
                 <tbody>
                     {jobs.map((job) => (
-                        <tr key={job.id} className="border-t">
-                            <td>
-                                <Link to={`/jobs/${job.id}`}>{job.id}</Link>
+                        <tr key={job.id} className="border-t cursor-pointer hover:bg-gray-100 transition"
+                            onClick={() => navigate(`/jobs/${job.id}`)}
+                        >
+                            <td className="p-3">
+                                {job.id}
                             </td>
                             <td>{job.taskName}</td>
                             <td>{job.priority}</td>
