@@ -43,26 +43,30 @@ function CreateJobForm({onJobCreated}){
     }
 
     return (
-        <div className="flex items-center justify-center mt-5">
-            <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-5 rounded-md shadow ">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-10 w-full max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="w-full max-w-md  p-5 ">
                 <h2 className="text-2xl font-semibold text-center">Create Job</h2>
-                {error && <p>{error}</p>}
-                <div>
-                    <label>Task Name</label>
+                {error && <p className="text-red-600">{error}</p>}
+                <div className="my-2">
+                    <label className="text-xl">Task Name</label>
                     <br/>
                     <input 
-                        className="border p-2 rounded w-full mb-4"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 my-3
+                            focus:outline-none focus:ring-2 focus:ring-blue-500
+                            focus:border-blue-500"
                         type="text"
                         placeholder="job Name"
                         value={taskName}
                         onChange={(e) => setTaskName(e.target.value)}
                     />
                 </div>
-                <div>
-                    <label>Priority</label>
+                <div className="my-2">
+                    <label className="text-xl">Priority</label>
                     <br />
                     <select 
-                        className="border p-2 rounded w-full mb-4"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 my-3
+                            focus:outline-none focus:ring-2 focus:ring-blue-500
+                            focus:border-blue-500"
                         value={priority}
                         onChange={(e) => setPriority(e.target.value)}
                     >
@@ -71,18 +75,20 @@ function CreateJobForm({onJobCreated}){
                         <option value="High">High</option>
                     </select>
                 </div>
-                <div>
-                    <label>Payload (JSON)</label>
+                <div className="my-2">
+                    <label className="text-xl">Payload (JSON)</label>
                     <br />
                     <textarea 
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 my-3
+                            focus:outline-none focus:ring-2 focus:ring-blue-500
+                            focus:border-blue-500"
                         rows="4" 
                         value={payload}
-                        className="border p-2 rounded w-full mb-4"
                         onChange={(e) => setPayload(e.target.value)}
                         placeholder='{"email": "test@gmail.com"}'
                     />
                 </div>
-                <button type="submit" disabled={loading} className="bg-green-600 text-white px-3 py-1 rounded">
+                <button type="submit" disabled={loading} className=" text-xl bg-green-600 text-white px-4 py-2 rounded">
                     {loading ? 'Creating...' : 'Create Job'}
                 </button>
             </form>
